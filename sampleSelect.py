@@ -35,7 +35,6 @@ chosenPatients = []
 for key, value in patientSamples.iteritems():
     for myvalue in patientSamples[key]:
         if myvalue[5] == "Reset":
-            #chosenSamples.append(myvalue)
             chosenPatients.append(key)
         
 len(chosenPatients)
@@ -60,7 +59,7 @@ f = open('sample_outputfile_backup.csv', 'w')
 
 #emit results
 for item in chosenSamples:
-    f.write(', '.join(chosenSamples[item])  ) #str(chosenSamples[item]))
+    f.write(', '.join(chosenSamples[item])  )
     f.write("\n")
 
 
