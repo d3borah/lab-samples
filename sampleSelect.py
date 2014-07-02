@@ -1,7 +1,4 @@
-
-
 import sys
-
 from collections import defaultdict
 
 filename = "samples.csv"
