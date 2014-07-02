@@ -3,7 +3,6 @@ from collections import defaultdict
 
 filename = "samples.csv"
 
-
 with open(filename) as f:content = f.readlines()[1:] #skip the header
 data = []
 
@@ -18,12 +17,10 @@ unique_patient_ids = set(patient_ids)
 len(unique_patient_ids)
 patientSamples = defaultdict(list)
 
-
 for patient in unique_patient_ids:
     for sample in data:
         if sample[7] == patient:
                 patientSamples[patient].append(sample)
-
 
 #for key, value in patientSamples.iteritems():
     #print key, 'corresponds to',patientSamples[key]
@@ -46,7 +43,6 @@ for patient in chosenPatients:
                 if ((myvalue[5] == "") | (myvalue[5] == "Duplicate")):
                     chosenSamples[patient] = myvalue            
 
-
 len(chosenSamples)
 
 #for item in chosenSamples:
@@ -58,7 +54,3 @@ f = open('sample_outputfile_backup.csv', 'w')
 for item in chosenSamples:
     f.write(', '.join(chosenSamples[item])  )
     f.write("\n")
-
-
-
-
