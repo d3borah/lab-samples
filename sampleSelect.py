@@ -56,7 +56,7 @@ len(chosenSamples)
 #for item in chosenSamples:
     #print chosenSamples[item][5]
 
-f = open('debs_sample_outputfile_backup.csv', 'w')
+f = open('sample_outputfile_backup.csv', 'w')
 
 #emit results
 for item in chosenSamples:
