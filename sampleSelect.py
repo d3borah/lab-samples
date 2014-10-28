@@ -69,7 +69,7 @@ chosenSampList = []
 for item in chosenSamples:
     chosenSampList.append(chosenSamples[item])
 
-
+#sort the list by one of the nested list elements - the freezer location
 import operator
 chosenSampList.sort(key=operator.itemgetter(8))
 
