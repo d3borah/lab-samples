@@ -40,7 +40,7 @@ def main(argv):
 
         #slice the list into new list in a list comprehension
         patient_ids = [x[7] for x in data]
-        print "There are " , len(patient_ids) , " patient IDs"
+        print "There are " , len(patient_ids) , " samples"
         unique_patient_ids = set(patient_ids)
         print "There are " , len(unique_patient_ids) , " unique patient IDs"
 
@@ -64,6 +64,7 @@ def main(argv):
                 if myvalue[5] == "Reset":
                     chosenPatients.append(key)
     
+        print "There are " , len(chosenPatients), " patients to RESET"
 
         """
         go through the samples and select just one sample for each of the chosen patients, provided 
@@ -84,6 +85,8 @@ def main(argv):
             chosenSampList.append(chosenSamples[item])
         #sort the list by one of the nested list elements - the freezer location
         chosenSampList.sort(key=operator.itemgetter(8))
+
+        print "There were replicate samples found for " , len(chosenSampList) , " patients"
 
         f = open(outputfile, 'w')
 
